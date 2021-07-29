@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import CarCard from '../../components/CarCard';
 
 import Header from '../../components/Header';
@@ -8,9 +9,13 @@ import { ICar } from './types';
 
 const Dashboard: React.FC = () => {
   const [cars, setCars] = useState<ICar[]>([]);
+  const hystory = useHistory();
 
-  const handleDetailsPage = (id: number) => {
-    console.log(id);
+  const handleDetailsPage = (data: ICar) => {
+    hystory.push({
+      pathname: '/car',
+      state: data,
+    });
   };
   useEffect(() => {
     async function fetchCars() {
@@ -25,7 +30,7 @@ const Dashboard: React.FC = () => {
       <Header />
       <S.Container>
         {cars.map(car => (
-          <CarCard data={car} onClick={handleDetailsPage} />
+          <CarCard data={car} onClick={() => handleDetailsPage(car)} />
         ))}
       </S.Container>
       ;

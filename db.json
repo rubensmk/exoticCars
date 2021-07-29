@@ -90,13 +90,25 @@
       "maker": "Ferrari",
       "price": 725,
       "image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=a306573a-1bce-448f-a6a6-923b1affe4cf&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
+      "logo": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=2e6ec02b-e1ee-407c-9d5e-f6c7c71ae782&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
       "details": [
         {
-          "logo": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=2e6ec02b-e1ee-407c-9d5e-f6c7c71ae782&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
-          "main_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=90a993c7-476c-4f87-ac0a-db43b447503f&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
-          "variant_1": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=b18b73f4-caf2-43ae-98a6-cf34b6220f9a&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
-          "variant_2": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=eb4d0d77-2683-42c4-9365-53c27bae664a&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
-          "variant_3": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=f5150e64-b4d7-4b0c-a4bf-6ef281bf2725&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610"
+          "id": 1,
+          "color": "red",
+          "icon_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=160d7ee8-2f0b-41ec-a815-0f7550073f8d&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
+          "main_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=90a993c7-476c-4f87-ac0a-db43b447503f&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610"
+        },
+        {
+          "id": 2,
+          "color": "yellow",
+          "icon_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=6073cd30-dc9e-42c3-b818-46e92e9ac6a5&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
+          "main_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=16370e0f-b5e6-4be3-955c-80e3e0879774&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610"
+        },
+        {
+          "id": 3,
+          "color": "gray",
+          "icon_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=6f209590-2a7e-4d6d-99bf-648b339e9e18&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610",
+          "main_image": "https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:699a6983-35c7-4662-bc81-5c626742102d;revision=0?component_id=ae932fe6-95bf-48d4-8b9c-529d8d1db75c&api_key=CometServer1&access_token=1627603994_urn%3Aaaid%3Asc%3AUS%3A699a6983-35c7-4662-bc81-5c626742102d%3Bpublic_2164aec10376baa4834e26028cfa06403edcb610"
         }
       ]
     },

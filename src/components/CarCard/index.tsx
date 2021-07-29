@@ -9,14 +9,15 @@ interface CarProps {
     maker: string;
     price: number;
     image: string;
+    logo: string;
     details: ICarDetails[];
   };
-  onClick: (id: number) => void;
+  onClick: () => void;
 }
 const CarCard = ({ data, onClick }: CarProps): JSX.Element => {
   return (
     <>
-      <S.Container onClick={() => onClick(data.id)}>
+      <S.Container onClick={onClick}>
         <S.Title>
           <div>
             <strong>{data.maker}</strong>

@@ -1,10 +1,9 @@
 /* eslint-disable camelcase */
 export interface ICarDetails {
-  logo: string;
+  id: number;
+  color: string;
+  icon_image: string;
   main_image: string;
-  variant_1: string;
-  variant_2: string;
-  variant_3: string;
 }
 export interface ICar {
   id: number;
@@ -12,5 +11,6 @@ export interface ICar {
   maker: string;
   price: number;
   image: string;
+  logo: string;
   details: ICarDetails[];
 }
