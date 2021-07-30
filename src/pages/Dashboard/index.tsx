@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import CarCard from '../../components/CarCard';
 
 import Header from '../../components/Header';
-import api from '../../services/api';
 import * as S from './styles';
 import { ICar } from './types';
 
@@ -19,8 +19,8 @@ const Dashboard: React.FC = () => {
   };
   useEffect(() => {
     async function fetchCars() {
-      const response = await api.get('/cars');
-      const allCars = response.data;
+      const response = await axios.get('db.json');
+      const allCars = response.data.cars;
       setCars(allCars);
     }
     fetchCars();
@@ -30,7 +30,11 @@ const Dashboard: React.FC = () => {
       <Header />
       <S.Container>
         {cars.map(car => (
-          <CarCard data={car} onClick={() => handleDetailsPage(car)} />
+          <CarCard
+            data={car}
+            onClick={() => handleDetailsPage(car)}
+            key={car.id}
+          />
         ))}
       </S.Container>
       ;

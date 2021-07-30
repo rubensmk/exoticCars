@@ -1,3 +1,6 @@
+import { arrowsPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import { useState } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -21,6 +24,27 @@ interface IDataProps {
 
 const Car = ({ location }: IDataProps): JSX.Element => {
   const hystory = useHistory();
+  const [currentCar, setCurrentCar] = useState(0);
+
+  const handleNextCar = async () => {
+    if (currentCar >= 2) {
+      setCurrentCar(0);
+    } else {
+      setCurrentCar(prevState => prevState + 1);
+    }
+  };
+  const handlePrevCar = async () => {
+    if (currentCar === 0) {
+      setCurrentCar(2);
+    } else {
+      setCurrentCar(prevState => prevState - 1);
+    }
+  };
+  const handleChange = async () => {
+    if (currentCar < 0 && currentCar > 2) {
+      setCurrentCar(0);
+    }
+  };
   return (
     <>
       <Header />
@@ -41,7 +65,7 @@ const Car = ({ location }: IDataProps): JSX.Element => {
         {location.state.details && (
           <>
             <S.Title>
-              <img src={location.state.logo} alt={location.state.maker} />
+              <img src={`${location.state.logo}`} alt={location.state.maker} />
               <div>
                 <h1>
                   {location.state.maker} {location.state.model}
@@ -54,19 +78,62 @@ const Car = ({ location }: IDataProps): JSX.Element => {
                 <FiArrowLeft />
                 Back to catalog
               </button>
-              <img
-                src={location.state.details[0].main_image}
-                alt={location.state.model}
-              />
+              <S.MainImg>
+                <img
+                  src={location.state.details[currentCar].main_image}
+                  alt={location.state.model}
+                />
+              </S.MainImg>
+
               <div>
-                <h1>0{location.state.details[0].id}</h1>
-                <p>{location.state.details[0].color.toUpperCase()}</p>
+                <h1>0{location.state.details[currentCar].id}</h1>
+                <p>{location.state.details[currentCar].color.toUpperCase()}</p>
               </div>
             </S.Content>
             <S.BookNow>
               Book Now
               <FiArrowRight />
             </S.BookNow>
+            <S.Carousel
+              value={currentCar}
+              onChange={handleChange}
+              plugins={[
+                'infinite',
+                'centered',
+                {
+                  resolve: arrowsPlugin,
+                  options: {
+                    arrowLeft: (
+                      <S.CarouselButton type="button" onClick={handlePrevCar}>
+                        <FiArrowLeft size="18" />
+                      </S.CarouselButton>
+                    ),
+                    arrowRight: (
+                      <S.CarouselButton type="button" onClick={handleNextCar}>
+                        <FiArrowRight size="18" />
+                      </S.CarouselButton>
+                    ),
+                    addArrowClickHandler: true,
+                  },
+                },
+                {
+                  resolve: slidesToShowPlugin,
+                  options: {
+                    numberOfSlides: 3,
+                  },
+                },
+              ]}
+            >
+              {location.state.details &&
+                location.state.details.map(item => (
+                  <S.CarouselImg
+                    src={item.icon_image}
+                    alt={item.color}
+                    key={item.id}
+                    isChoosed={currentCar === item.id - 1}
+                  />
+                ))}
+            </S.Carousel>
           </>
         )}
       </S.Container>

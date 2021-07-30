@@ -26,7 +26,7 @@ const CarCard = ({ data, onClick }: CarProps): JSX.Element => {
           <FiMoreHorizontal />
         </S.Title>
         <S.CarImg>
-          <img src={data.image} alt={data.model} />
+          <img src={`${data.image}`} alt={data.model} />
         </S.CarImg>
         <S.Price>
           <h2>$</h2>

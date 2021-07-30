@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+import ReactCarousel from '@brainhubeu/react-carousel';
+
+interface CarouselImgProps {
+  isChoosed: boolean;
+}
+
+const FadeInAnimation = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -7,11 +17,13 @@ export const Container = styled.div`
   background: transparent linear-gradient(125deg, #ffffff 0%, #d8d7d7 100%) 0%
     0% no-repeat padding-box;
   height: 100vh;
+
+  animation: ${FadeInAnimation} 1.2s;
 `;
 
 export const Title = styled.div`
   display: flex;
-  padding-top: 3.3rem;
+  padding-top: 2.3rem;
   padding-left: 5.625rem;
   width: 100%;
   justify-content: flex-start;
@@ -32,7 +44,7 @@ export const Title = styled.div`
 
 export const Content = styled.main`
   display: flex;
-
+  animation: ${FadeInAnimation} 1.2s;
   button {
     display: flex;
     justify-content: center;
@@ -68,6 +80,9 @@ export const Content = styled.main`
   }
 `;
 
+export const MainImg = styled.div`
+  animation: ${FadeInAnimation} 1.2s;
+`;
 export const BookNow = styled.button`
   border: 1px solid var(--black);
   border-radius: 1.5rem;
@@ -95,4 +110,38 @@ export const BookNow = styled.button`
   &:hover {
     opacity: 0.9;
   }
+`;
+
+export const CarouselButton = styled.button`
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: var(--black);
+  border-radius: 50%;
+
+  svg {
+    color: var(--white);
+  }
+`;
+
+export const CarouselImg = styled.img<CarouselImgProps>`
+  width: 301px;
+  height: 180px;
+  border-radius: 8px;
+
+  ${props =>
+    props.isChoosed &&
+    css`
+      background: transparent linear-gradient(52deg, #a1a7f4 0%, #e6d3f1 100%)
+        0% 0% no-repeat padding-box;
+      width: 310px;
+      height: 200px;
+    `}
+`;
+
+export const Carousel = styled(ReactCarousel)`
+  animation: ${FadeInAnimation} 1.2s;
+  margin-top: 2.2rem;
+  padding-left: 5.6rem;
+  padding-right: 5.6rem;
 `;
